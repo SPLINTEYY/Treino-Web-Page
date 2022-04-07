@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Cool Web</title>
+</head>
+<body>
+    <div class="Container">
+      <button class="btnRegister" onclick="registerForm();">Register</button>
+      <h1 class="Titulo">Cool Page</h1>
+      <img class="ProfilePic" src="file:///C:/Users/splin/OneDrive/Pictures/D9GMRGAZ_400x400%20(3).jpg">
+      <input class = "InputMail" type="email" placeholder="email">
+      <input class = "inputPassword" type="password" placeholder="Password">
+      <button class="btnEnter" onclick="Login()">Enter</button>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+
+<script src="script.js"></script>
+    <script>
+      function registerForm(){
+        document.getElementsByClassName("btnRegister")[0].innerHTML = "Login";
+        document.getElementsByClassName("Titulo")[0].innerHTML = "Registre a sua Pagina Feliz";
+        document.getElementsByClassName("inputMail")[0].placeholder = "Confirme seu email";
+        document.getElementsByClassName("inputPassword")[0].placeholder = "Confirme sua senha";
+         document.getElementsByClassName("btnEnter")[0].innerHTML  = "Register";
+      }
+        function Login(){
+          Swal.fire({
+          position: "mid",
+          icon: "success",
+          title: "Seja bem vindo a Pagina Feliz",
+          showConfirmButton: false,
+          timer: 1500, 
+      });
+ }
+   </script>
+  </body>
+ </html>
